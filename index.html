@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>Power Electrode Ltd — Operations Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="loginView" class="login-view">
+    <div class="login-shell">
+      <section class="login-brand-panel">
+        <div class="brand-lockup large">
+          <div class="brand-mark">PE</div>
+          <div>
+            <div class="brand-name">POWER ELECTRODE</div>
+            <div class="brand-sub">Operations & Business Intelligence</div>
+          </div>
+        </div>
+        <div class="login-copy">
+          <span class="eyebrow">LIVE BUSINESS VISIBILITY</span>
+          <h1>Know what is happening in the business — from anywhere.</h1>
+          <p>Track sales, income, production, inventory, expenses, customer payments, staff activity and business performance from Ghana or abroad.</p>
+        </div>
+        <div class="feature-grid">
+          <div class="feature-card"><strong>Inventory</strong><span>Raw materials, finished goods, low/high stock</span></div>
+          <div class="feature-card"><strong>Production</strong><span>Targets, output, waste, damages, material usage</span></div>
+          <div class="feature-card"><strong>Sales & Finance</strong><span>Sales, payments, revenue, expenses and profit</span></div>
+          <div class="feature-card"><strong>Audit & Access</strong><span>Staff logins, permissions and activity history</span></div>
+        </div>
+      </section>
+      <section class="login-form-panel">
+        <div class="demo-pill">Interactive Sample • Dummy Data</div>
+        <h2>Sign in to the demo</h2>
+        <p class="muted">Use any demo role below to preview role-based access.</p>
+        <form id="loginForm" class="login-form">
+          <label>Email<input id="email" type="email" value="owner@powerelectrode.com" required /></label>
+          <label>Password<input id="password" type="password" value="demo123" required /></label>
+          <button class="primary-btn" type="submit">Sign In</button>
+        </form>
+        <div class="demo-accounts">
+          <button data-demo="owner@powerelectrode.com">Owner / Super Admin</button>
+          <button data-demo="manager@powerelectrode.com">General Manager</button>
+          <button data-demo="production@powerelectrode.com">Production</button>
+          <button data-demo="sales@powerelectrode.com">Sales</button>
+          <button data-demo="store@powerelectrode.com">Storekeeper</button>
+          <button data-demo="finance@powerelectrode.com">Finance</button>
+        </div>
+        <div class="login-note">Password for all demo accounts: <strong>demo123</strong></div>
+      </section>
+    </div>
+  </div>
+
+  <div id="appView" class="app-view hidden">
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-top">
+        <div class="brand-lockup compact">
+          <div class="brand-mark">PE</div>
+          <div>
+            <div class="brand-name">POWER ELECTRODE</div>
+            <div class="brand-sub">Operations System</div>
+          </div>
+        </div>
+        <button id="closeSidebar" class="icon-btn mobile-only">✕</button>
+      </div>
+      <nav id="nav" class="nav"></nav>
+      <div class="sidebar-footer">
+        <div class="demo-badge">DEMO MODE</div>
+        <div class="small muted">All figures are sample data.</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button id="menuBtn" class="icon-btn mobile-only">☰</button>
+          <div>
+            <div id="pageEyebrow" class="eyebrow">OVERVIEW</div>
+            <h2 id="pageTitle">Dashboard</h2>
+          </div>
+        </div>
+        <div class="topbar-right">
+          <div class="status-dot-wrap"><span class="status-dot"></span><span class="desktop-only">Live</span></div>
+          <button id="notificationBtn" class="icon-btn">🔔<span class="notification-count">4</span></button>
+          <div class="user-menu">
+            <div class="avatar" id="avatar">EO</div>
+            <div class="desktop-only">
+              <div id="userName" class="user-name">Owner</div>
+              <div id="userRole" class="muted small">Super Admin</div>
+            </div>
+            <button id="logoutBtn" class="text-btn">Logout</button>
+          </div>
+        </div>
+      </header>
+
+      <section id="content" class="content"></section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-card">
+      <div class="modal-head"><h3 id="modalTitle">Action</h3><button id="modalClose" class="icon-btn">✕</button></div>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
